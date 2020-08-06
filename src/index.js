@@ -6,10 +6,10 @@ import HttpsRedirect from 'react-https-redirect';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-    <React.StrictMode>
+    // <React.StrictMode>
         <HttpsRedirect>
             <App />
-        </HttpsRedirect>
-    </React.StrictMode>,
+        </HttpsRedirect>,
+    // </React.StrictMode>,
     document.getElementById("root")
 );
