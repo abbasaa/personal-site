@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+body, html {
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#navLink {
+    font-size: larger; 
+    /* color: #A0D2DB; */
+    color: inherit;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#navLink:hover {
+    color: #F8C7CC;
+    font-weight: bolder;
 }
 
-.App-link {
-  color: #61dafb;
+.indexBackground {
+    background: url('./static/Ocean-2.5s.svg');
+    /* background: url('./static/Speedline-2s-1920px.svg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #292F36;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#wordEmphasis {
+    /* color: #A0D2DB; */
+    /* color: #DB5461; */
+    color: #F8C7CC; 
+    font-weight: bolder;
+}
+
+#wordEmphasis:hover {
+    /* color: #4C60A9; */
+    color: #DB5461;
+    /* color: #F8C7CC;  */
+    /* font-weight: bolder; */
+}
+
+#subHeader {
+    color: white;
+    font-weight: bolder;
 }
