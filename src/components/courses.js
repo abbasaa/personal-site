@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { useMediaQuery } from 'react-responsive';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -27,6 +28,10 @@ export default function Courses({ colorTheme }) {
         }
     };
 
+    const isLarge = useMediaQuery({
+        minDeviceWidth: 1024
+    });
+
     return (
         <Jumbotron fluid
             style={{
@@ -41,6 +46,7 @@ export default function Courses({ colorTheme }) {
                     </Col>
                 </Row>
 
+                { isLarge ?
                 <Row>
                     <Col>
                         <Course
@@ -76,18 +82,51 @@ export default function Courses({ colorTheme }) {
                     </Col>
                 </Row>
 
+                : 
+                
+                <>
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Advanced Operating Systems"
+                            subtitle="EECS 482 | Fall 2020"
+                        >
+                            Covers the topics behind modern operating systems including concurrency,
+                            thread managing, virtual memory paging, and file systems. 
+                        </Course>
+                
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Web Systems"
+                            subtitle="EECS 485 | Fall 2020"
+                        >
+                            Project oriented course that covers modern web systems and technologies by building full stack web apps including
+                            Instagram clone and Google clone.
+                        </Course>
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Foundations of Computer Science"
+                            subtitle="EECS 376 | Fall 2020"
+                        >
+                            Provides introduction to the Theory of Computation including algorithms,
+                            finite automata, computability, complexity, and cryptography.
+                        </Course>
+                </>
+
+                }
+
                 <div
                     style={{
                         textAlign: 'center',
-                        padding: '20px'
+                        padding: '20px',
+                        paddingBottom: '35px'
                     }}
                 >
                     <ExpandButton imgSrc={buttonSrc} toggleSrc={toggleSrc} width={30} height="auto" />
                 </div>
                 
-                { isExpanded ?
+                { isLarge && isExpanded ? 
                 <>
-                <Row style={{ marginBottom: '20px'}}>
+                <Row>
                     <Col>
                         <Course
                             colorTheme={colorTheme}
@@ -194,7 +233,98 @@ export default function Courses({ colorTheme }) {
                         </Course>
                     </Col>
                 </Row>
+
+                </> : undefined }
+
+                { !isLarge && isExpanded ? 
+                
+                <>
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Introduction to Machine Learning"
+                            subtitle="EECS 445 | Winter 2020"
+                        >
+                            Covers theory and implementation of machine learning algorithms. 
+                            Includes both supervised and unsupervised learning methods.
+                        </Course>
+                    
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Linear Algebra"
+                            subtitle="MATH 217 | Winter 2020"
+                        >
+                            Provides rigorous introduction to linear algebra and proof based
+                            maths. Topics include matrix algebra, vector
+                            spaces, linear dependence, bases, dimensions,
+                            eigenvalues and eigenvectors, diagonalization, and inner products.
+                        </Course>
+                    
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Introduction to Probability"
+                            subtitle="MATH 425 | Winter 2020"
+                        >
+                            Topics include basics of both discrete and continuous probability theory:
+                            conditional probability, independence, random variables, 
+                            expectations, variances, and covariances.
+                        </Course>
+
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Algorithms and Data Structures II"
+                            subtitle="EECS 281 | Fall 2019"
+                        >
+                            Builds upon course before algorithms like shortest path finding, union find, and quicksort.
+                            And more complex data structures like self-balancing trees, heaps, pairing heaps, and graphs.
+                        </Course>
+                    
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Algorithms and Data Structures I"
+                            subtitle="EECS 280 | Winter 2018"
+                        >
+                            Covers foundation of CS with topics including OOP design, polymorphism, arrays,
+                            linked-lists, binary search trees, recursion, and more.
+                        </Course>
+                    
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Discrete Mathematics"
+                            subtitle="EECS 203 | Winter 2018"
+                        >
+                            Covers the foundation of math behind CS including logic, induction, probability,
+                            recurrences, and complexity.
+                        </Course>
+                        
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Computer Organization"
+                            subtitle="EECS 370 | Winter 2020"
+                        >
+                            Covers lower level programming including assembly, linkers, CPU design,
+                            pipelines, caches, and virtual memory.
+                        </Course>
+                    
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Intro Logic Design"
+                            subtitle="EECS 270 | Fall 2019"
+                        >
+                            Intro to digital logic in verilog. Built finite state machines and datapaths
+                            in order to solve problems like adding, multiplication, and logic controllers.
+                        </Course>
+                    
+                        <Course
+                            colorTheme={colorTheme}
+                            title="Differential Equations"
+                            subtitle="MATH 216 | Fall 2018"
+                        >
+                            Learned techniques in order to solve ordinary differential
+                            equations analytically and more complex equations through numerical methods
+                            in MatLab.
+                        </Course>
                 </>
+                
                 : undefined } 
                 
             </Container>

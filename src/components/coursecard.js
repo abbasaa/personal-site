@@ -6,8 +6,9 @@ export default function Course({ colorTheme, title, subtitle, children }) {
     return (
         <Card
             style={{
-                width: '18rem',
-                backgroundColor: colorTheme.babyPink
+                backgroundColor: colorTheme.babyPink,
+                margin: '20px', 
+                borderRadius: '25px'
             }}
         >
             <Card.Body>

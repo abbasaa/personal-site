@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useMediaQuery } from 'react-responsive';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -10,6 +11,7 @@ import Card from 'react-bootstrap/Card';
 import NavBar from '../components/navbar';
 import Intro from '../components/intro'; 
 import Arrow from '../components/arrow';
+import About from '../components/about';
 import Courses from '../components/courses';
 import Projects from '../components/projects';
 import Footer from '../components/footer';
@@ -27,58 +29,15 @@ export default function Home() {
         indianRed: '#DB5461'
     };
 
+    const isLarge = useMediaQuery({
+        minDeviceWidth: 1024
+    });
+
     return (
         <div className="indexBackground">
             <NavBar notTransparentAt={990} />
             <Intro /> 
-
-                
-            <Jumbotron fluid
-                style={{
-                    backgroundColor: '#292F36',
-                    color: 'white',
-                    margin: 'auto'
-                }}
-                
-            >
-                <Container>
-                    <Row
-                        style={{ 
-                            textAlign: 'center',
-                            marginBottom: '25px'
-                        }}
-                    >
-                        <Col>
-                            <h1 id="subHeader">about me</h1> 
-                        </Col> 
-                    </Row> 
-                    <Row>
-                        <Col
-                            style={{
-                                textAlign: 'center',
-                                paddingRight: '0px'
-                            }}
-                        >
-                            <img src={profilePic} width={210} height="auto"
-                                style={{ clipPath: 'circle(50% at 50% 50%)' }}
-                            /> 
-                        </Col>
-                        <Col>
-                            <h3>
-                                I'm an undergraduate student at the University of Michigan, Ann Arbor,
-                                majoring in Computer Science Engineering with a minor in Mathematics.
-                                I'm interested in 
-                                <text id="wordEmphasis"> web systems</text>,
-                                <text id="wordEmphasis"> data visualization</text>, and 
-                                <text id="wordEmphasis"> machine learning</text>. I have
-                                experience with Python, React, Node.js, and C++.
-                            </h3> 
-                        </Col>
-                    </Row>
-                </Container>
-
-            </Jumbotron>
-
+            <About />
             <Courses colorTheme={colorTheme} />                 
             <Projects colorTheme={colorTheme} />
 

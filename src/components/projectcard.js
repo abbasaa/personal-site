@@ -7,7 +7,8 @@ export default function Project({ colorTheme, title, subtitle, button, children 
         <Card
             style={{
                 backgroundColor: colorTheme.lightBlue,
-                margin: '20px'
+                margin: '20px',
+                borderRadius: '25px'
             }}
         >
             <Card.Body>

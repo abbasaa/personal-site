@@ -49,7 +49,7 @@ export default function Projects({ colorTheme }) {
                         <Project
                             colorTheme={colorTheme}
                             title="Dario, the Friendly Calendar Assistant"
-                            subtitle="2020 - present"
+                            subtitle="May 2020 - present | Python, Flask, Nodejs, Expressjs, Reactjs, MongoDB"
                             button = {
                                 <Button variant="primary" style={{ backgroundColor: colorTheme.lightBlue, borderColor: colorTheme.gunMetal, color: colorTheme.gunMetal }} href="https://schedulewithdario.com">Find out more</Button>
                             }
@@ -67,7 +67,7 @@ export default function Projects({ colorTheme }) {
                         <Project
                             colorTheme={colorTheme}
                             title="GitHub Shocks - Summer Research Experience for Undergraduates"
-                            subtitle="May 2020 - August 2020"
+                            subtitle="May 2020 - August 2020 | Python, NumPy, Pandas, Matplotlib"
                         >
                             Conducted network analysis research in Python under the School of Information. Analyzed the impact of Gitter chat rooms
                             on GitHub repositories. Gitter chat rooms provide an organized way for GitHub organizations and repo members
@@ -88,19 +88,42 @@ export default function Projects({ colorTheme }) {
                 </div>
 
                 { isExpanded ?
-                        <Project
-                            colorTheme={colorTheme}
-                            title="Dario, the friendly calendar assistant"
-                            subtitle="2020 - present"
-                            button = {
-                                <Button variant="primary" style={{ backgroundColor: colorTheme.lightBlue, borderColor: colorTheme.gunMetal, color: colorTheme.gunMetal }} href="https://schedulewithdario.com">Find out more</Button>
-                            }
-                        >
-                                With supporting text below as a natural lead-in to additional content.
+                    <>
+                    <Project
+                        colorTheme={colorTheme}
+                        title="abbasaa.github.io"
+                        subtitle="August 2020 | Reactjs"
+                    >
+                        This responsive web application is built completely out of functional React components and React hooks 
+                        with a mobile friendly design in mind. Check out this website on your phone to see
+                        it adapt.
+                    </Project>
 
-                        </Project>
-                
-                
+                    <Project
+                        colorTheme={colorTheme}
+                        title="Rate My Professor"
+                        subtitle="April 2020 | Python, Scikit-Learn, NumPy, Matplotlib"
+                    >
+                        Trained multiclass One-vs-All SVM on rate my professor data in order to identify sentiment
+                        of a given professor review. Implemented 5-fold cross validation with grid and random search
+                        in order to tune hyperparameters. Experimented with the use of linear and quadratic kernel and L1
+                        and L2 penalties. Binary classification accuracy of 83% and multiclass classification accuracy of 62%. 
+                    </Project>
+                    
+                    <Project
+                        colorTheme={colorTheme}
+                        title="Food Classification Convolutional Neural Network with Autoencoder Pretraining"
+                        subtitle="April 2020 | Python, PyTorch, NumPy, Matplotlib"
+                    >
+                        Used supervised and unsupervised learning techniques in order to classify food pictures into
+                        5 categories. Built the model using PyTorch and made use of important MlOps features like saving checkpoints and 
+                        live loss plotting. First, I took the input of 20,000 JPG images and preprocessed them by downsampling
+                        all the images (to improve runtime) and standardize the images by dividing by max rgb pixel value (i.e.
+                        255). I initiated the weights of the CNN to be normally distributed around 0. Training for 100 epochs,
+                        I was able to achieve 58 % validation accuracy. Using an autoencoder to pretrain weights in the CNN, I was
+                        able to achieve 62 % validation accuracy.
+                    </Project>
+                    </>
                 : undefined }
 
                 </Container>

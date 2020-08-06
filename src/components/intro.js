@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Container from 'react-bootstrap/Container';
@@ -22,6 +23,10 @@ import downloadRed from '../static/downloadArrowRed.svg';
 export default function Intro() {
     const [buttonColor, setButtonColor] = useState('#F8C7CC');
     
+    const isLarge = useMediaQuery({
+        minDeviceWidth: 1024
+    });
+
     return (
         <Jumbotron
                 fluid
@@ -31,18 +36,31 @@ export default function Intro() {
                 }} 
             >
                 <Container>
-                    <div style={{ marginTop: '100px'}}></div>
+                    { isLarge ?
+                    
+                        <div style={{ marginTop: '100px'}}></div> :
+                        <div style={{ marginTop: '75px'}}></div>
+                    
+                    } 
                     
                     <Row>
                         <Col> 
+                            { isLarge ?
                             <h1 style={{ fontSize: '4.5rem'}}>
                                 Hello I'm <text id="wordEmphasis">Abbas Ahmed</text>,
                             </h1>
+                            : 
+                            <h1>
+                                Hello I'm <text id="wordEmphasis">Abbas Ahmed</text>,
+                            </h1>
+                            } 
                         </Col>
                     </Row> 
 
                     <Row style={{ marginBottom: '13px'}}>
                         <Col> 
+                            { isLarge ?
+                            <> 
                             <h1 style={{ fontSize: '2.5rem' }}>
                                 <text id="wordEmphasis">computer science </text>
                                 undergrad <text style={{color: "#4C60A9"}}>@ </text>
@@ -56,6 +74,16 @@ export default function Intro() {
                             <h1 style={{ fontSize: '2.5rem' }}>
                                 <text id="wordEmphasis">data scientist</text>
                             </h1>
+                            </> 
+                            :
+                            <>
+                            <h3>
+                                <text id="wordEmphasis">computer science </text>
+                                undergrad <text style={{color: "#4C60A9"}}>@ </text>
+                                <SocialIcon imgSrc={[mlogo, mlogoBlue]} width={50} link="https://engin.umich.edu" /> 
+                            </h3>
+                            </> 
+                            } 
                         </Col>
                     </Row>
 
@@ -66,6 +94,7 @@ export default function Intro() {
                                 style={{
                                     backgroundColor: buttonColor,
                                     borderColor: buttonColor,
+                                    borderRadius: '15px',
                                     fontSize: 'larger',
                                     color: 'black'
                                 }}
@@ -84,8 +113,12 @@ export default function Intro() {
                             <SocialIcon imgSrc={[downloadIcon, downloadRed]} width={30} link="https://linkedin.com" />
                         </Col>
                     </Row> 
-
-                    <div style={{ marginBottom: '350px'}}></div>
+                    
+                    { isLarge ?
+                    
+                        <div style={{ marginBottom: '350px'}}></div> :
+                        <div style={{ marginBottom: '150px'}}></div>
+                    }
 
                     <div style={{ textAlign: 'center' }}>
                         <Arrow imgSrc={downArrow} width={50} height="auto" scrollLoc={1000} /> 

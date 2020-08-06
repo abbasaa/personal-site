@@ -16,7 +16,6 @@ export default function App() {
         <Router>
             <Switch>
                 <Route exact path="/" component={Home} />
-                {/* <Route exact path="/privacy" component={Projects} /> */}
                 <Route exact path="/404" component={NotFound} />
                 <Redirect to="/404" />
             </Switch>
