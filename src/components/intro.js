@@ -116,7 +116,7 @@ export default function Intro() {
                     
                     { isLarge ?
                     
-                        <div style={{ marginBottom: '350px'}}></div> :
+                        <div style={{ marginBottom: '450px'}}></div> :
                         <div style={{ marginBottom: '150px'}}></div>
                     }
 
