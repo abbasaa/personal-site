@@ -109,8 +109,8 @@ export default function Intro() {
                         
                         <Col>
                             <SocialIcon imgSrc={[githubIcon, githubRed]} width={30} link="https://github.com/abbasaa" />
-                            <SocialIcon imgSrc={[linkedInIcon, linkedInRed]} width={32} link="https://linkedin.com" />
-                            <SocialIcon imgSrc={[downloadIcon, downloadRed]} width={30} link="https://linkedin.com" />
+                            <SocialIcon imgSrc={[linkedInIcon, linkedInRed]} width={32} link="https://linkedin.com/in/abbas-ahmed-4439b01b1" />
+                            <SocialIcon imgSrc={[downloadIcon, downloadRed]} width={30} link="/resume.pdf" />
                         </Col>
                     </Row> 
                     

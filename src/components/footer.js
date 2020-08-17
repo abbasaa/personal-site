@@ -27,8 +27,8 @@ export default function Footer() {
                 <Row style={{ marginBottom: "20px" }}>
                     <Col>
                         <SocialIcon imgSrc={[githubIcon, githubRed]} width={23} link="https://github.com/abbasaa" />
-                        <SocialIcon imgSrc={[linkedInIcon, linkedInRed]} width={25} link="https://linkedin.com" />
-                        <SocialIcon imgSrc={[downloadIcon, downloadRed]} width={23} link="https://linkedin.com" />
+                        <SocialIcon imgSrc={[linkedInIcon, linkedInRed]} width={25} link="https://linkedin.com/in/abbas-ahmed-4439b01b1" />
+                        <SocialIcon imgSrc={[downloadIcon, downloadRed]} width={23} link="/resume.pdf" />
                     </Col>
                 </Row> 
                 
