@@ -16,7 +16,7 @@ import downloadRed from '../static/downloadArrowRed.svg';
 
 export default function Footer() {
     return (
-        <Jumbotron fluid 
+        <Jumbotron fluid
             style={{
                 backgroundColor: '#A0D2DB',
                 textAlign: 'center',
@@ -28,13 +28,13 @@ export default function Footer() {
                     <Col>
                         <SocialIcon imgSrc={[githubIcon, githubRed]} width={23} link="https://github.com/abbasaa" />
                         <SocialIcon imgSrc={[linkedInIcon, linkedInRed]} width={25} link="https://linkedin.com/in/abbas-ahmed-4439b01b1" />
-                        <SocialIcon imgSrc={[downloadIcon, downloadRed]} width={23} link="/resume.pdf" />
+                        <SocialIcon imgSrc={[downloadIcon, downloadRed]} width={23} link="/syedAbbasAhmedResumeW21.pdf" />
                     </Col>
-                </Row> 
-                
+                </Row>
+
                 <Row>
                     <Col>
-                        <h6 id="copyright-tag">© 2020 abbas ahmed</h6> 
+                        <h6 id="copyright-tag">© 2021 abbas ahmed</h6>
                     </Col>
                 </Row>
             </Container>
